@@ -139,20 +139,20 @@ NMILagFrame:
     inc.b mem.LagFrames
     bra EndOfInterrupt
 
-include "obj.asm"
 include "coin.asm"
 include "explosion.asm"
 include "gfxstuff.asm"
 include "tools.asm"
+include "obj.asm" // this has to be included last due to constant determination stuff??
 
 // This is in the format that it is in memory, see memory.asm -> Objects for more info
 scope CoinData: {
 start:
-    dw 0,0,200*8,200*8
-    dw 0,160*8,0,160*8
+    dw 0,0,200*32,200*32
+    dw 0,160*32,0,160*32
     db $04,$00,$00,$00
     db $03,$00,$00,$00
-    db $00,$00,$00,$00
+    db $01,$02,$01,$00
     db $00,$0c,$18,$24
 end:
 constant length(end - start)

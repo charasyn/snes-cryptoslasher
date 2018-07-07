@@ -34,14 +34,14 @@ scope objects {
         and.w #$00ff
         adc.b mem.Objects.X,x
         sta.b mem.Objects.X,x
-        jsr.w tools.S16DivBy8
+        jsr.w tools.S16DivBy32
         sta.b mem.ObjTmp.ObjX
         
         lda.w mem.Objects.VY,y
         and.w #$00ff
         adc.b mem.Objects.Y,x
         sta.b mem.Objects.Y,x
-        jsr.w tools.S16DivBy8
+        jsr.w tools.S16DivBy32
         sta.b mem.ObjTmp.ObjY
 
         // Get byte and word offsets based on ObjType
