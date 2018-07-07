@@ -1,0 +1,17 @@
+collision pseudocode
+
+def CheckPointerCollision(px, py, cx, cy, objects):
+    if px == cx:
+        
+    #               x          y             w          h
+    pcoll = Rect(min(px,cx), min(py,cy), abs(px-cx), abs(py-cy))
+    m = (py - cy) / (px - cx)
+    yi = cy - cx * m
+    for obj in objects:
+        if not (pcoll.l <= obj.r and pcoll.r >= obj.l):
+            continue
+        yl = yi + obj.l * m
+        yr = yi + obj.r * m
+        # test line coming down
+        if yl < yr and yl <= obj.b and yr >= obj.t:
+            return 

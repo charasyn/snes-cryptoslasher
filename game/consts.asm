@@ -1,0 +1,15 @@
+scope consts {
+    constant ScreenWPx(256)
+    constant ScreenHPx(224)
+    constant CoinLW(44)
+    constant CoinLH(48)
+    constant CoinMW(30)
+    constant CoinMH(32)
+    constant CoinSW(15)
+    constant CoinSH(16)
+    constant ExplosionLW(32)
+    constant ExplosionLH(32)
+    constant ExplosionSW(16)
+    constant ExplosionSH(16)
+    constant NumObjects(4)
+}
